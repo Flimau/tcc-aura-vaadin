@@ -38,6 +38,5 @@ public interface UsuarioSistemaRepository extends JpaRepository<UsuarioSistema, 
 
     Optional<UsuarioSistema> findByTokenAtivacao(String token);
 
-    Optional<UsuarioSistema> findByLogin(String login);
-
+    UsuarioSistema findByUsername(String username);
 }

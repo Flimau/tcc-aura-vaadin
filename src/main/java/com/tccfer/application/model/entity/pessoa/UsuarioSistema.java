@@ -1,5 +1,6 @@
 package com.tccfer.application.model.entity.pessoa;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.tccfer.application.model.entity.enuns.TipoUsuario;
 import jakarta.persistence.*;
 import lombok.*;
@@ -20,6 +21,11 @@ public class UsuarioSistema extends AbstractEntity{
 
     @Column(nullable = false, unique = true)
     private String login;
+
+    private String username;
+
+    @JsonIgnore
+    private String hashedPassword;
 
     @Column(nullable = false)
     private String senha;
